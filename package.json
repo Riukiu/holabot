@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-<<<<<<< HEAD
     "start": "node index.js"
-=======
-    "start" : "node index.js"
->>>>>>> b40a6c560e0bfc789d785536c452f663df1597c4
   },
   "repository": {
     "type": "git",
