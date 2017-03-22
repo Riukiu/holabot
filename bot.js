@@ -23,16 +23,14 @@ module.exports = function(params) {
 	self.onEvent = function(event) {
 		//reception d'un message
 		console.log("Event recu");
-		console.log(event.user);
-		console.log(user);
-		if (event.type == "message") { //& ! user == message.user) {
+		if (event.type == "message") {
 			console.log("message recu");
 			self.onMessage(event);
 			
 		}
 	}
 	self.onMessage = function(message) {
-			if (message.bot_id) {
+			if (message.bot_id && self.user.profile.bot_id != event.bot_id) {
 				self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone)
 			}
 			else {
