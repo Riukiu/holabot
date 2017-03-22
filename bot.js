@@ -16,6 +16,7 @@ module.exports = function(params) {
 			this.user = user;
 		});
 		var icone = {icon_emoji: ':dog:'};
+		console.log("Started");
 		self.bot.postMessageToUser('ludo_david', 'meow!, ca marche', icone); 
 		self.bot.postMessageToChannel('general', 'meow!', icone);
 	}
@@ -24,11 +25,12 @@ module.exports = function(params) {
 		console.log(event);
 		if (event.type == "message") {
 			self.onMessage(event);
+			console.log("message recu");
 		}
 	}
 	self.onMessage = function(message) {
 		    self.bot.postMessage(message.user, 'Je ne comprends pas', icone);
+			console.log('réponse envoye');
 	}
 	
 }
-
