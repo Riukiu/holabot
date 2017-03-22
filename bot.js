@@ -30,7 +30,7 @@ module.exports = function(params) {
 		}
 	}
 	self.onMessage = function(message) {
-			if (message.bot_id && self.user.profile.bot_id != event.bot_id) {
+			if (message.bot_id && self.user.profile.bot_id != message.bot_id) {
 				self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone)
 				setTimeout(function(){}, 2000);
 			}
