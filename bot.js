@@ -29,7 +29,7 @@ module.exports = function(params) {
 		}
 	}
 	self.onMessage = function(message) {
-		    self.bot.postMessage(message.user, 'Je ne comprends pas', icone);
+		    self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
 			console.log('réponse envoye');
 	}
 	
