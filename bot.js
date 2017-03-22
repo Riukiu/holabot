@@ -15,10 +15,9 @@ module.exports = function(params) {
 		self.bot.getUser(self.bot.self.name).then(function(user) {
 			this.user = user;
 		});
-		var icone = {
-        	icon_emoji: ':dog:'
-    	};
+		var icone = {icon_emoji: ':dog:'};
 		self.bot.postMessageToUser('ludo_david', 'meow!, ca marche', icone); 
+		self.bot.postMessageToChannel('random', 'meow!', icone);
 	}
 	self.onEvent = function(event) {
 		//reception d'un message
