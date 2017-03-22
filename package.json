@@ -1,0 +1,16 @@
+{
+  "name": "hola_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+    "start" : "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "URL"
+  },
+  "author": "",
+  "license": "ISC"
+}
