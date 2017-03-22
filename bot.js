@@ -23,7 +23,7 @@ module.exports = function(params) {
 	self.onEvent = function(event) {
 		//reception d'un message
 		console.log("Event recu");
-		console.log(message.user);
+		console.log(event.user);
 		console.log(user);
 		if (event.type == "message") { //& ! user == message.user) {
 			console.log("message recu");
