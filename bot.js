@@ -3,6 +3,7 @@ const SlackBot = require('slackbots');
 module.exports = function(params) {
 	this.bot = null;
 	var self = this;
+	var icone = {icon_emoji: ':dog:'};
 
 	self.connect=function() {
 		
@@ -15,7 +16,6 @@ module.exports = function(params) {
 		self.bot.getUser(self.bot.self.name).then(function(user) {
 			this.user = user;
 		});
-		var icone = {icon_emoji: ':dog:'};
 		console.log("Started");
 		self.bot.postMessageToUser('ludo_david', 'meow!, ca marche', icone); 
 		self.bot.postMessageToChannel('general', 'meow!', icone);
