@@ -30,8 +30,13 @@ module.exports = function(params) {
 		}
 	}
 	self.onMessage = function(message) {
+			if (message.bot_id) {
+
+			}
+			else {
 		    self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
 			console.log('réponse envoye');
+			}
 	}
 	
 }
