@@ -34,13 +34,13 @@ module.exports = function(params) {
 				if (self.user.profile.bot_id != message.bot_id) {
 				setTimeout(function() {
 					self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone);
-				}, 10000);}
+				}, 10000);
 				}
 			}
 			else {
 				setTimeout(function() {
 		   			self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
-		   		}, 10000);}
+		   		}, 10000);
 			console.log('réponse envoye');
 			}
 	}
