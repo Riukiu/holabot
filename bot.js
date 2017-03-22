@@ -24,8 +24,9 @@ module.exports = function(params) {
 		//reception d'un message
 		console.log("Event recu");
 		if (event.type == "message") {
-			self.onMessage(event);
 			console.log("message recu");
+			self.onMessage(event);
+			
 		}
 	}
 	self.onMessage = function(message) {
