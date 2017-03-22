@@ -31,11 +31,11 @@ module.exports = function(params) {
 	}
 	self.onMessage = function(message) {
 			if (message.bot_id && self.user.profile.bot_id != message.bot_id) {
-				self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone)
-				setTimeout(function(){}, 2000);
+				//self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone)
+				///setTimeout(function(){}, 2000);
 			}
 			else {
-		    self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
+		   // self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
 			console.log('réponse envoye');
 			}
 	}
