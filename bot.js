@@ -14,7 +14,7 @@ module.exports = function(params) {
 	self.onStart = function() {
 		// Le bot est connecté
 		self.bot.getUser(self.bot.self.name).then(function(user) {
-			this.user = user;
+			self.user = user;
 		});
 		console.log("Started");
 		self.bot.postMessageToUser('ludo_david', 'meow!, ca marche', icone); 
@@ -32,6 +32,7 @@ module.exports = function(params) {
 	self.onMessage = function(message) {
 			if (message.bot_id && self.user.profile.bot_id != event.bot_id) {
 				self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone)
+				setTimeout(function(){}, 2000);
 			}
 			else {
 		    self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
