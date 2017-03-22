@@ -30,12 +30,17 @@ module.exports = function(params) {
 		}
 	}
 	self.onMessage = function(message) {
-			if (message.bot_id && self.user.profile.bot_id != message.bot_id) {
-				//self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone)
-				///setTimeout(function(){}, 2000);
+			if (message.bot_id) {
+				if (self.user.profile.bot_id != message.bot_id) {
+				setTimeout(function() {
+					self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone);
+				}, 10000);}
+				}
 			}
 			else {
-		   // self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
+				setTimeout(function() {
+		   			self.bot.postMessage(message.channel, 'Je ne comprends pas', icone);
+		   		}, 10000);}
 			console.log('réponse envoye');
 			}
 	}
