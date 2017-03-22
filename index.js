@@ -1,5 +1,5 @@
 //var SlackBot = require('slackbots');
-
+var express = require('express');
 var Bot = require('./bot.js');
 
 
@@ -16,6 +16,11 @@ var bots = new Bot({
 });
 
 bots.connect();
+
+
+var app = express();
+
+app.listen(3000);
 
 /*
 bot.on('start', function() {
