@@ -33,7 +33,7 @@ module.exports = function(params) {
 			if (message.bot_id) {
 				if (self.user.profile.bot_id != message.bot_id) {
 				setTimeout(function() {
-					self.bot.postMessage(message.channel, "Les bots racontent vraiment n'importe quoi", icone);
+					self.bot.postMessage(message.channel, ":rocket:'" ,icone);
 				}, 2000);
 				}
 			}
