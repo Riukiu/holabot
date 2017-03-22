@@ -17,7 +17,7 @@ module.exports = function(params) {
 		});
 		var icone = {icon_emoji: ':dog:'};
 		self.bot.postMessageToUser('ludo_david', 'meow!, ca marche', icone); 
-		self.bot.postMessageToChannel('random', 'meow!', icone);
+		self.bot.postMessageToChannel('general', 'meow!', icone);
 	}
 	self.onEvent = function(event) {
 		//reception d'un message
