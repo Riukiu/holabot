@@ -12,14 +12,23 @@ module.exports = function(params) {
 	}
 	self.onStart = function() {
 		// Le bot est connecté
-		var params = {
-        	icon_emoji: ':dog:'
-    	};
-		self.bot.postMessageToUser('ludo_david', 'meow!, fichier bot', params); 
+		self.bot.getUser(self.bot.self.name).then(function(user) {
+			this.user = user;
+		});
+		var icone = {icon_emoji: ':dog:'};
+		self.bot.postMessageToUser('ludo_david', 'meow!, ca marche', icone); 
+		self.bot.postMessageToChannel('general', 'meow!', icone);
 	}
 	self.onEvent = function(event) {
 		//reception d'un message
 		console.log(event);
+		if (event.type == "message") {
+			self.onMessage(event);
+		}
+	}
+	self.onMessage = function(message) {
+		    self.bot.postMessage(message.user, 'Je ne comprends pas', icone);
 	}
 	
 }
+
